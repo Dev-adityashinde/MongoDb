@@ -11,6 +11,7 @@ public class Validation {
 	@Bean
 	public ValidatingMongoEventListener  validatingmongoeventlistener()
 	{
+		System.out.println("validating mongo event listener");
 		return new ValidatingMongoEventListener(validator());
 	}
 	
@@ -18,6 +19,7 @@ public class Validation {
 	@Bean
 	public LocalValidatorFactoryBean validator()
 	{
+		System.out.println("validating factory bean");
 		return new LocalValidatorFactoryBean();
 	}
 	
